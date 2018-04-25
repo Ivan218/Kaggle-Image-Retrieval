@@ -1,0 +1,4 @@
+# shuffle function using Perl (pass filename as arg)
+shuffle() { perl -MList::Util=shuffle -e 'print shuffle(<>);' "$@"; }
+# command used to extract new data
+shuffle index.csv | head -n 10000 > new.csv
